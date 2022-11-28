@@ -108,7 +108,12 @@
 		'malloc' and 'free' are C functions that are compatible with C++ code while 'new' and 'delete' are speficic C++ functions.
 	
 9. Explain the purpose of std::move, and std::forward. 
+	Answer: std::move is used to convert an lvalue reference to an rvalue reference, often to transfer the resources held by one lvalue to another.
+		std::forward is used to distinguish between lvalue and rvalue references, often in the case where a parameter of type rvalue reference is deduced to be
+		an lvalue.
+	
 10. How do you share resources safely between threads? How would you share an integer value vs user defined type? 
+
 11. What are the some of the principles of object-oriented programming?
 12. Explain inheritance vs composition vs aggregation?
 13. Should you always initialize variables? 
