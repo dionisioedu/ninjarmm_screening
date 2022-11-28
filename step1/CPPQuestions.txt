@@ -89,10 +89,10 @@
 
 6. What is the difference between R-Values and L-Values?
 	Answer: r-value simply means, an object that has no identifiable location in memory (i.e. having an address).
+	
 		l-value simply means an object that has an identifiable location in memory (i.e. having an address).
-
-In any assignment statement “lvalue” must have the capability to store the data.
-lvalue cannot be a function, expression (like a+b) or a constant (like 3 , 4 , etc.).
+		In any assignment statement “lvalue” must have the capability to store the data.
+		lvalue cannot be a function, expression (like a+b) or a constant (like 3 , 4 , etc.).
 
 7. Is this code safe? If so why? If not why?
 	std::string foo()
@@ -102,7 +102,11 @@ lvalue cannot be a function, expression (like a+b) or a constant (like 3 , 4 , e
 	}
 	
 	Bonus: What would most compilers do with this code?
+	
 8. Why would you use new rather than malloc when allocating an object? Likewise, what's the difference between free and delete?
+	Answer: The 'new' keyword calls the constructor function of a class whereas 'malloc' keyword doesn't. The same way, the 'free' keyword doesn't call the 		destructor of the class while the 'delete' keyword does.
+		'malloc' and 'free' are C functions that are compatible with C++ code while 'new' and 'delete' are speficic C++ functions.
+	
 9. Explain the purpose of std::move, and std::forward. 
 10. How do you share resources safely between threads? How would you share an integer value vs user defined type? 
 11. What are the some of the principles of object-oriented programming?
