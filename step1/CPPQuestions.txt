@@ -101,7 +101,11 @@
 		return something;
 	}
 	
+	Answer: It looks like a safe code. The std::string something is created on the stack, in the scope of foo() but in the return it is copied to the caller.
+	
 	Bonus: What would most compilers do with this code?
+	
+	Answer: I guess some compilers, with the right flags, would optimize this function making it inline or constexpr.
 	
 8. Why would you use new rather than malloc when allocating an object? Likewise, what's the difference between free and delete?
 	Answer: The 'new' keyword calls the constructor function of a class whereas 'malloc' keyword doesn't. The same way, the 'free' keyword doesn't call the 		destructor of the class while the 'delete' keyword does.
@@ -115,15 +119,25 @@
 10. How do you share resources safely between threads? How would you share an integer value vs user defined type? 
 
 11. What are the some of the principles of object-oriented programming?
+	Answer: Object-oriented programming has four basic concepts: encapsulation, abstraction, inheritance and polymorphism.
+	
 12. Explain inheritance vs composition vs aggregation?
+
 13. Should you always initialize variables? 
+
 14. What concept(s) in C++ would you use to manage resources automatically?
 	a. How important are these concepts? 	
 	b. What tools are you familiar with for tracking resource allocations? 
+	
 15. What security concerns have you come across in the past and how have you addressed them?
+
 16. Name some tools and/or techniques that you personally find to be the most helpful surrounding development.
-17. Name some tools and/or techniques that you personally find to be the most helpful surrounding code maintenance.   
+
+17. Name some tools and/or techniques that you personally find to be the most helpful surrounding code maintenance. 
+
 18. Scenario: You are dealing with legacy code containing no test suites nor documented requirements, and are required to make a change. Describe your expected process for how you may approach the solution. 
 	a. Consider both a long term and short-term solutions. 
+	
 19. What concerns do you had supporting legacy operating systems? (If any)
+
 20. Tell us about a project you worked on that you found to be interesting or unusual. 
