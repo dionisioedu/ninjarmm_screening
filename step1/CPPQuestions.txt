@@ -101,11 +101,16 @@
 		return something;
 	}
 	
-	Answer: It looks like a safe code. The std::string something is created on the stack, in the scope of foo() but in the return it is copied to the caller.
+	Answer: Yes. An local object is created and a copy is returned to the caller.
 	
 	Bonus: What would most compilers do with this code?
 	
-	Answer: I guess some compilers, with the right flags, would optimize this function making it inline or constexpr.
+	Answer: Following the Return Value Optimization rule, the copy will be ommited and the creation of the object will be made
+		directly in the return statement.
+
+		In the context of the C++ programming language, return value optimization (RVO) is a compiler optimization that involves
+		eliminating the temporary object created to hold a function's return value. RVO is allowed to change the observable
+		behaviour of the resulting program by the C++ standard.
 	
 8. Why would you use new rather than malloc when allocating an object? Likewise, what's the difference between free and delete?
 	Answer: The 'new' keyword calls the constructor function of a class whereas 'malloc' keyword doesn't. The same way, the 'free' keyword doesn't call the 		destructor of the class while the 'delete' keyword does.
